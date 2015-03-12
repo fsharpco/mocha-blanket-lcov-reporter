@@ -1,0 +1,25 @@
+{
+  "name": "mocha-blanket-lcov-reporter",
+  "version": "0.0.1",
+  "description": "LCOV reporter for Mocha using blanket for coverage.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/efsharp/mocha-blanket-lcov-reporter.git"
+  },
+  "keywords": [
+    "lcov",
+    "mocha",
+    "blanket",
+    "coverage"
+  ],
+  "author": "Ron Elliott <ron@efsharp.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/efsharp/mocha-blanket-lcov-reporter/issues"
+  },
+  "homepage": "https://github.com/efsharp/mocha-blanket-lcov-reporter"
+}

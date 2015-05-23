@@ -95,28 +95,13 @@ function clean(test) {
     };
 }
 
-function extractStats(data) {
-    var lh = 0,
-        lines = Object.keys(data.source),
-        lf = lines.length;
-
-    Object.keys(data.source).forEach(function(line) {
-        if (data.source[line].coverage !== '') { lh++; }
-    });
-
-    data.lh = lh;
-    data.lf = lf;
-
-    return data;
-}
-
 function reportFile(filename, data) {
     process.stdout.write('SF:' + filename + '\n');
     Object.keys(data.source).forEach(function(line) {
         process.stdout.write('DA:' + line + ',' + (data.source[line].coverage || 0) + '\n');
     });
-    process.stdout.write('LF:' + data.lf + '\n');
-    process.stdout.write('LH:' + data.lh + '\n');
+    process.stdout.write('LF:' + data.sloc + '\n');
+    process.stdout.write('LH:' + data.hits + '\n');
     process.stdout.write('end_of_record\n');
 }
 
@@ -154,7 +139,7 @@ function lcov(runner, output) {
         }
 
         result.files.forEach(function(file) {
-            reportFile(file.filename, extractStats(file));
+            reportFile(file.filename, file);
         });
     });
 }

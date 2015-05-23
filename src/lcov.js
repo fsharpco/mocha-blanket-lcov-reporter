@@ -100,6 +100,8 @@ function reportFile(filename, data) {
     Object.keys(data.source).forEach(function(line) {
         process.stdout.write('DA:' + line + ',' + (data.source[line].coverage || 0) + '\n');
     });
+    process.stdout.write('LF:' + data.sloc + '\n');
+    process.stdout.write('LH:' + data.hits + '\n');
     process.stdout.write('end_of_record\n');
 }
 

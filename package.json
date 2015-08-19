@@ -1,6 +1,6 @@
 {
   "name": "mocha-blanket-lcov-reporter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "LCOV reporter for Mocha using blanket for coverage.",
   "main": "index.js",
   "scripts": {
